@@ -325,6 +325,25 @@
                 gap: 15px;
             }
         }
+
+        
+        .container1 {
+            width: 100%;
+            max-width: 1000px;
+        }
+        
+        .container1 h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        
+        .container1 svg {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -420,6 +439,186 @@
                 <p>When you clicked the button, JavaScript made this appear. That's the power of JavaScript - it makes your webpage interactive!</p>
                 <p>Try clicking the button again to hide it.</p>
             </div>
+        </section>
+
+        <section>
+            <div class="container1">
+        <h1>Web Development: HTML, CSS & JavaScript</h1>
+        
+        <svg viewBox="0 0 680 420" role="img" xmlns="http://www.w3.org/2000/svg">
+            <title>HTML, CSS, and JavaScript layers</title>
+            <desc>Three side-by-side illustrations showing how HTML provides structure, CSS adds styling, and JavaScript adds interactivity to create a complete webpage.</desc>
+            
+            <defs>
+                <linearGradient id="htmlGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.05" />
+                </linearGradient>
+                <linearGradient id="cssGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#42b983;stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:#42b983;stop-opacity:0.05" />
+                </linearGradient>
+                <linearGradient id="jsGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f39c12;stop-opacity:0.2" />
+                    <stop offset="100%" style="stop-color:#f39c12;stop-opacity:0.05" />
+                </linearGradient>
+            </defs>
+
+            <!-- Section 1: HTML Structure -->
+            <g>
+                <!-- Background -->
+                <rect x="20" y="20" width="200" height="380" rx="8" fill="url(#htmlGrad)" stroke="#667eea" stroke-width="2"/>
+                
+                <!-- Title -->
+                <text x="120" y="50" text-anchor="middle" font-weight="500" font-size="18" fill="#667eea">HTML</text>
+                <text x="120" y="68" text-anchor="middle" font-size="12" fill="#999">The Structure</text>
+                
+                <!-- Wireframe elements -->
+                <!-- Header -->
+                <rect x="35" y="90" width="170" height="25" rx="3" fill="none" stroke="#667eea" stroke-width="2" stroke-dasharray="4,4"/>
+                <text x="120" y="107" text-anchor="middle" fill="#667eea" font-size="11">Header</text>
+                
+                <!-- Navigation -->
+                <rect x="35" y="125" width="170" height="20" rx="3" fill="none" stroke="#667eea" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <text x="120" y="138" text-anchor="middle" fill="#667eea" font-size="10">Navigation</text>
+                
+                <!-- Main content area -->
+                <rect x="35" y="155" width="170" height="160" rx="3" fill="none" stroke="#667eea" stroke-width="2" stroke-dasharray="4,4"/>
+                
+                <!-- Boxes inside main -->
+                <rect x="45" y="165" width="75" height="30" rx="2" fill="none" stroke="#667eea" stroke-width="1.5"/>
+                <text x="82.5" y="185" text-anchor="middle" fill="#667eea" font-size="10">Content</text>
+                
+                <rect x="130" y="165" width="65" height="30" rx="2" fill="none" stroke="#667eea" stroke-width="1.5"/>
+                <text x="162.5" y="185" text-anchor="middle" fill="#667eea" font-size="10">Sidebar</text>
+                
+                <line x1="45" y1="205" x2="195" y2="205" stroke="#667eea" stroke-width="1" stroke-dasharray="2,2"/>
+                <rect x="45" y="215" width="150" height="25" rx="2" fill="none" stroke="#667eea" stroke-width="1.5"/>
+                <text x="120" y="233" text-anchor="middle" fill="#667eea" font-size="10">Image area</text>
+                
+                <rect x="45" y="250" width="150" height="50" rx="2" fill="none" stroke="#667eea" stroke-width="1.5"/>
+                <text x="120" y="268" text-anchor="middle" fill="#667eea" font-size="10">Text content</text>
+                <line x1="50" y1="278" x2="190" y2="278" stroke="#667eea" stroke-width="0.5" stroke-dasharray="2,2"/>
+                <line x1="50" y1="288" x2="190" y2="288" stroke="#667eea" stroke-width="0.5" stroke-dasharray="2,2"/>
+                
+                <!-- Footer -->
+                <rect x="35" y="325" width="170" height="25" rx="3" fill="none" stroke="#667eea" stroke-width="2" stroke-dasharray="4,4"/>
+                <text x="120" y="342" text-anchor="middle" fill="#667eea" font-size="11">Footer</text>
+                
+                <!-- Label -->
+                <text x="120" y="375" text-anchor="middle" fill="#999" font-size="12">Skeleton &amp; Content</text>
+            </g>
+
+            <!-- Section 2: CSS Styling -->
+            <g>
+                <!-- Background -->
+                <rect x="240" y="20" width="200" height="380" rx="8" fill="url(#cssGrad)" stroke="#42b983" stroke-width="2"/>
+                
+                <!-- Title -->
+                <text x="340" y="50" text-anchor="middle" font-weight="500" font-size="18" fill="#42b983">CSS</text>
+                <text x="340" y="68" text-anchor="middle" font-size="12" fill="#999">The Style</text>
+                
+                <!-- Styled webpage -->
+                <!-- Header with gradient -->
+                <rect x="255" y="90" width="170" height="30" rx="4" fill="#667eea"/>
+                <text x="340" y="111" text-anchor="middle" fill="white" font-size="12" font-weight="500">My Website</text>
+                
+                <!-- Navigation with colors -->
+                <rect x="255" y="130" width="170" height="28" rx="4" fill="#764ba2"/>
+                <text x="340" y="150" text-anchor="middle" fill="white" font-size="11">Home   About   Contact</text>
+                
+                <!-- Main content area -->
+                <rect x="255" y="168" width="170" height="160" rx="4" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+                
+                <!-- Cards inside -->
+                <rect x="260" y="175" width="75" height="35" rx="3" fill="white" stroke="#ddd" stroke-width="1"/>
+                <rect x="262" y="177" width="71" height="8" rx="2" fill="#42b983" opacity="0.3"/>
+                <text x="297.5" y="207" text-anchor="middle" fill="#333" font-size="10">Featured</text>
+                
+                <rect x="350" y="175" width="65" height="35" rx="3" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+                <text x="382.5" y="197" text-anchor="middle" fill="#666" font-size="10">Latest</text>
+                
+                <rect x="260" y="220" width="155" height="25" rx="3" fill="white" stroke="#ddd" stroke-width="1"/>
+                <rect x="263" y="224" width="40" height="17" rx="2" fill="#42b983" opacity="0.4"/>
+                <text x="340" y="235" text-anchor="middle" fill="#666" font-size="9">Beautiful image display</text>
+                
+                <rect x="260" y="255" width="155" height="60" rx="3" fill="white" stroke="#ddd" stroke-width="1"/>
+                <line x1="265" y1="263" x2="410" y2="263" stroke="#ddd" stroke-width="0.5"/>
+                <line x1="265" y1="272" x2="410" y2="272" stroke="#ddd" stroke-width="0.5"/>
+                <line x1="265" y1="281" x2="380" y2="281" stroke="#ddd" stroke-width="0.5"/>
+                <line x1="265" y1="290" x2="405" y2="290" stroke="#ddd" stroke-width="0.5"/>
+                <text x="340" y="312" text-anchor="middle" fill="#666" font-size="9">Styled typography</text>
+                
+                <!-- Footer -->
+                <rect x="255" y="325" width="170" height="25" rx="4" fill="#333"/>
+                <text x="340" y="343" text-anchor="middle" fill="white" font-size="10">&copy; 2024 - All rights</text>
+                
+                <!-- Label -->
+                <text x="340" y="375" text-anchor="middle" fill="#999" font-size="12">Colors, fonts, layout</text>
+            </g>
+
+            <!-- Section 3: JavaScript Interactivity -->
+            <g>
+                <!-- Background -->
+                <rect x="460" y="20" width="200" height="380" rx="8" fill="url(#jsGrad)" stroke="#f39c12" stroke-width="2"/>
+                
+                <!-- Title -->
+                <text x="560" y="50" text-anchor="middle" font-weight="500" font-size="18" fill="#f39c12">JavaScript</text>
+                <text x="560" y="68" text-anchor="middle" font-size="12" fill="#999">The Behavior</text>
+                
+                <!-- Interactive webpage -->
+                <!-- Header -->
+                <rect x="475" y="90" width="170" height="30" rx="4" fill="#667eea"/>
+                <text x="560" y="111" text-anchor="middle" fill="white" font-size="12" font-weight="500">My Website</text>
+                
+                <!-- Navigation with hover indicator -->
+                <rect x="475" y="130" width="170" height="28" rx="4" fill="#764ba2"/>
+                <rect x="510" y="132" width="30" height="24" rx="2" fill="white" opacity="0.2"/>
+                <text x="560" y="150" text-anchor="middle" fill="white" font-size="11">Home   About   Contact</text>
+                
+                <!-- Main content area -->
+                <rect x="475" y="168" width="170" height="160" rx="4" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+                
+                <!-- Interactive elements with indicators -->
+                <rect x="480" y="175" width="75" height="35" rx="3" fill="white" stroke="#f39c12" stroke-width="2"/>
+                <rect x="482" y="177" width="71" height="8" rx="2" fill="#f39c12" opacity="0.4"/>
+                <circle cx="560" cy="177" r="4" fill="#f39c12" opacity="0.6"/>
+                <text x="517.5" y="207" text-anchor="middle" fill="#333" font-size="9">Clickable</text>
+                
+                <rect x="360" y="175" width="65" height="35" rx="3" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
+                <text x="392.5" y="197" text-anchor="middle" fill="#666" font-size="10">Hover</text>
+                
+                <!-- Toggle/Animation indicator -->
+                <g>
+                    <rect x="480" y="220" width="155" height="25" rx="3" fill="white" stroke="#ddd" stroke-width="1"/>
+                    <path d="M520 225 L525 232 L520 239" stroke="#f39c12" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <path d="M530 225 L535 232 L530 239" stroke="#f39c12" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4"/>
+                    <text x="560" y="235" text-anchor="middle" fill="#666" font-size="9">Animations</text>
+                </g>
+                
+                <!-- Form validation indicator -->
+                <rect x="480" y="255" width="155" height="60" rx="3" fill="white" stroke="#ddd" stroke-width="1"/>
+                <circle cx="490" cy="270" r="3" fill="#42b983"/>
+                <text x="500" y="274" fill="#42b983" font-size="9">Input validated</text>
+                <line x1="485" y1="285" x2="620" y2="285" stroke="#ddd" stroke-width="0.5"/>
+                <circle cx="490" cy="295" r="3" fill="#f39c12" opacity="0.5"/>
+                <text x="500" y="299" fill="#666" font-size="9">Real-time feedback</text>
+                <line x1="485" y1="310" x2="620" y2="310" stroke="#ddd" stroke-width="0.5"/>
+                <circle cx="490" cy="305" r="2" fill="#e74c3c"/>
+                <text x="500" y="309" fill="#666" font-size="8">Error handling</text>
+                
+                <!-- Footer -->
+                <rect x="475" y="325" width="170" height="25" rx="4" fill="#333"/>
+                <text x="560" y="343" text-anchor="middle" fill="white" font-size="10">&copy; 2024 - All rights</text>
+                
+                <!-- Label -->
+                <text x="560" y="375" text-anchor="middle" fill="#999" font-size="12">Interactions &amp; dynamics</text>
+            </g>
+
+            <!-- Bottom text: The progression -->
+            <text x="340" y="410" text-anchor="middle" fill="#666" font-size="13">HTML builds the foundation → CSS makes it beautiful → JavaScript makes it alive</text>
+        </svg>
+    </div>
         </section>
     </main>
 
