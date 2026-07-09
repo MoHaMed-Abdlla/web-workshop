@@ -104,15 +104,6 @@ Use semantic tags to give meaning to your content:
 </footer>
 ```
 
-### 🎯 HTML Exercise (10 min)
-
-Create an HTML file with:
-- A header with your name
-- A navigation section (with links to Home, About, Contact)
-- A main section with an introduction paragraph
-- An image of yourself or a placeholder
-- A footer
-
 ---
 
 ## CSS Fundamentals
@@ -253,15 +244,6 @@ Flexbox makes creating responsive layouts easy:
 - `flex-direction: row | column`
 - `gap: 20px` (space between items)
 
-### 🎯 CSS Exercise (15 min)
-
-Style your HTML page from the previous exercise:
-- Add a background color to the body
-- Style headings (color, font-size)
-- Create a navigation bar with flexbox
-- Add a card/section with padding, border, and shadow
-- Make the image responsive (`width: 100%; height: auto;`)
-
 ---
 
 ## JavaScript Basics
@@ -384,13 +366,6 @@ element.classList.remove("active");
 element.classList.toggle("active");
 ```
 
-### 🎯 JavaScript Exercise (10 min)
-
-Add interactivity to your page:
-1. Create a button with id="toggleButton"
-2. Create a section with id="content" (hidden by default with `display: none`)
-3. When button is clicked, show/hide the section
-4. Bonus: Change button text between "Show" and "Hide"
 
 **Hint:**
 ```javascript
