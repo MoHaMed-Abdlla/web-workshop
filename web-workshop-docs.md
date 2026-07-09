@@ -1,7 +1,7 @@
 # Web Development Fundamentals Workshop
 ## IET On Campus - Web Development 101
 
-**Duration:** 2 hours | **Level:** Complete Beginners | **Facilitator:** [Your Name]
+**Duration:** 2 hours | **Level:** Complete Beginners | **Facilitator:** Mohamed Abdalla
 
 ---
 
