@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IET On Campus - Web Development Workshop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 2px dashed white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            text-align: center;
+            padding: 5px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: white;
+            padding: 60px 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .documentation-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .doc-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .doc-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        /* Cards Container */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Card Styling */
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .card-body p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .card-footer {
+            padding: 15px 20px;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+
+        /* Interactive Section */
+        .interactive-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .interactive-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 10px 10px 10px 0;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: scale(1.05);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-secondary {
+            background: #42b983;
+        }
+
+        .btn-secondary:hover {
+            background: #36a372;
+        }
+
+        /* Hidden Content */
+        .hidden-content {
+            display: none;
+            background: #f0f7ff;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .hidden-content.show {
+            display: block;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .interactive-section {
+                padding: 20px;
+            }
+
+            .documentation-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .doc-link {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="header-container">
+            <!-- Logo Placeholder -->
+            <div class="logo-placeholder">
+                <div class="logo-image">IET Logo</div>
+                <span>IET On Campus</span>
+            </div>
+            
+            <!-- Navigation -->
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#html">HTML</a>
+                <a href="#css">CSS</a>
+                <a href="#js">JavaScript</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h1>🚀 Web Development 101</h1>
+            <p>Learn the fundamentals of HTML, CSS, and JavaScript</p>
+            <p>Hosted by IET On Campus</p>
+            
+            <!-- Documentation Links -->
+            <div class="documentation-links">
+                <a href="web-workshop-docs.md" class="doc-link">📖 Full Documentation</a>
+                <a href="cheat-sheet.md" class="doc-link">📋 Quick Cheat Sheet</a>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section class="cards-container">
+            <div class="card" id="html-card">
+                <div class="card-header">
+                    🏗️ HTML
+                </div>
+                <div class="card-body">
+                    <h3>The Structure</h3>
+                    <p>HTML provides the skeleton and content of web pages. It's like the building blocks that hold everything together.</p>
+                </div>
+                <div class="card-footer">
+                    <small>HyperText Markup Language</small>
+                </div>
+            </div>
+
+            <div class="card" id="css-card">
+                <div class="card-header">
+                    🎨 CSS
+                </div>
+                <div class="card-body">
+                    <h3>The Style</h3>
+                    <p>CSS controls the visual appearance and layout. It's like putting clothes and makeup on your HTML to make it beautiful.</p>
+                </div>
+                <div class="card-footer">
+                    <small>Cascading Style Sheets</small>
+                </div>
+            </div>
+
+            <div class="card" id="js-card">
+                <div class="card-header">
+                    ⚡ JavaScript
+                </div>
+                <div class="card-body">
+                    <h3>The Behavior</h3>
+                    <p>JavaScript adds interactivity. It's like giving your website a brain so it can respond to what users do.</p>
+                </div>
+                <div class="card-footer">
+                    <small>The Programming Language</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive JavaScript Section -->
+        <section class="interactive-section" id="js">
+            <h2>Try JavaScript Interactivity</h2>
+            
+            <p>Click the buttons below to see JavaScript in action:</p>
+            
+            <button class="btn" id="showBtn">Show Hidden Content</button>
+            <button class="btn btn-secondary" id="colorBtn">Change Theme</button>
+            <button class="btn" id="counterBtn">Click Counter: 0</button>
+
+            <div class="hidden-content" id="hiddenContent">
+                <h3>✨ This content was hidden!</h3>
+                <p>When you clicked the button, JavaScript made this appear. That's the power of JavaScript - it makes your webpage interactive!</p>
+                <p>Try clicking the button again to hide it.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 IET On Campus - Web Development Workshop</p>
+        <p>Built with HTML, CSS, and JavaScript ❤️</p>
+        
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/company/iet-on-campus/" target="_blank">🔗 IET LinkedIn</a>
+            <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">👤 My LinkedIn</a>
+            <a href="#home">Back to Top</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ==========================================
+        // 1. TOGGLE HIDDEN CONTENT
+        // ==========================================
+        let showBtn = document.getElementById("showBtn");
+        let hiddenContent = document.getElementById("hiddenContent");
+
+        showBtn.addEventListener("click", function() {
+            hiddenContent.classList.toggle("show");
+            
+            // Change button text
+            if (hiddenContent.classList.contains("show")) {
+                showBtn.textContent = "Hide Content";
+            } else {
+                showBtn.textContent = "Show Hidden Content";
+            }
+        });
+
+        // ==========================================
+        // 2. THEME TOGGLE
+        // ==========================================
+        let colorBtn = document.getElementById("colorBtn");
+        let isDarkMode = false;
+
+        colorBtn.addEventListener("click", function() {
+            isDarkMode = !isDarkMode;
+            
+            if (isDarkMode) {
+                document.body.style.backgroundColor = "#222";
+                document.body.style.color = "#fff";
+                document.querySelector("header").style.background = "#111";
+            } else {
+                document.body.style.backgroundColor = "#f4f4f4";
+                document.body.style.color = "#333";
+                document.querySelector("header").style.background = "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
+            }
+        });
+
+        // ==========================================
+        // 3. CLICK COUNTER
+        // ==========================================
+        let counterBtn = document.getElementById("counterBtn");
+        let count = 0;
+
+        counterBtn.addEventListener("click", function() {
+            count++;
+            counterBtn.textContent = "Click Counter: " + count;
+        });
+
+        // ==========================================
+        // 4. SMOOTH SCROLL (Bonus)
+        // ==========================================
+        let navLinks = document.querySelectorAll("nav a");
+
+        navLinks.forEach(function(link) {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                let targetId = this.getAttribute("href");
+                let targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // ==========================================
+        // Welcome message in console
+        // ==========================================
+        console.log("%c🎉 Welcome to the Workshop! 🎉", "font-size: 20px; color: #667eea; font-weight: bold;");
+        console.log("Open DevTools (F12) to see the console!");
+        console.log("This is where JavaScript sends messages!");
+    </script>
+</body>
+</html>
