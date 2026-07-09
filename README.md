@@ -1,2 +1,2 @@
 # web-workshop
-IET Web Development Workshop 2026
+UCSI IET Web Development Workshop 2026
